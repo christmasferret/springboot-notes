@@ -1,6 +1,6 @@
-###springboot notes
+### springboot notes
  
-####1- getBean() using name instead of class
+#### 1- getBean() using name instead of class
 ```
 public class Main {
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class Main {
 } 
 ```
 
-####2- Use factory method to inject a builder that doesn't have a constructor
+#### 2- Use factory method to inject a builder that doesn't have a constructor
 
 ```
 //use static factory
@@ -31,7 +31,7 @@ OkHttpClient okHttpClient = ctx.getBean("okHttpClient", OkHttpClient.class);
 ```
 Use @Autowired, @Resources, @Injected to inject bean. 
 
-####3- bean registration to spring context
+#### 3- bean registration to spring context
  
 a. xml 
 
@@ -74,7 +74,7 @@ public class JavaConfig {
 
 
 
-####4- ContextAware
+#### 4- ContextAware
 to get context in bean
 ```
 @Component
@@ -93,7 +93,7 @@ public class SayHello implements ApplicationContextAware {
 }
 ```
 
-####5. AOP
+#### 5. AOP
  
 JDK Dynamic Proxy which needs interface vs cglib  
 
