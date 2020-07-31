@@ -18,8 +18,8 @@ public class Sb2ApplicationTests implements ApplicationContextAware {
 
     private ApplicationContext applicationContext;
 
-    @Autowired
-    private DemoMapper demoMapper;
+//    @Autowired
+//    private DemoMapper demoMapper;
 
     @Override
     public void setApplicationContext(ApplicationContext context) throws BeansException {
@@ -31,12 +31,12 @@ public class Sb2ApplicationTests implements ApplicationContextAware {
         System.out.println(applicationContext.getBean(A.class));
     }
 
-    @Test
-    public void testB() {
-        Demo demo = new Demo();
-        demo.setName("xx");
-        demo.setJob("student");
-        System.out.println(demoMapper.insert(demo));
-    }
+//    @Test
+//    public void testB() {
+//        Demo demo = new Demo();
+//        demo.setName("xx");
+//        demo.setJob("student");
+//        System.out.println(demoMapper.insert(demo));
+//    }
 
 }

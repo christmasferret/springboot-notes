@@ -1,6 +1,5 @@
 package com.mooc.sb2.controller;
 
-import com.example.weather.WeatherService;
 import com.mooc.sb2.bean.Demo;
 import com.mooc.sb2.service.DemoService;
 import com.mooc.sb2.service.TestService;
@@ -22,9 +21,6 @@ public class DemoController {
     @Autowired
     private TestService testService;
 
-    @Autowired
-    private WeatherService weatherService;
-
     @RequestMapping("/hello/{id}")
     @ResponseBody
     public String hello(@PathVariable(value = "id") Long id) {
@@ -35,12 +31,6 @@ public class DemoController {
     @ResponseBody
     public String test() {
         return testService.test();
-    }
-
-    @RequestMapping("weather")
-    @ResponseBody
-    public String weather() {
-        return weatherService.getType() + "," + weatherService.getRate();
     }
 
 }
